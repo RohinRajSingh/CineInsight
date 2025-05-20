@@ -1,0 +1,144 @@
+.navbar {
+  background-color: #000000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(205, 90, 90, 0.1);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.brand-title {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.brand-icon {
+  color: #e50914;
+  font-size: 1.8rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: #ccc;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.nav-link.active {
+  color: #e50914;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Theme classes applied on body */
+body.dark-mode {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --link-color: #ccc;
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --active-color: #e50914;
+}
+
+body.light-mode {
+  --bg-color: #918c8c;
+  --text-color: #000000;
+  --link-color: #333;
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --active-color: #e50914;
+}
+
+/* Apply variables */
+.navbar {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.brand-title {
+  color: var(--text-color);
+}
+
+.nav-link {
+  color: var(--link-color);
+}
+
+.nav-link:hover {
+  background-color: var(--hover-bg);
+  color: var(--text-color);
+}
+
+.nav-link.active {
+  color: var(--active-color);
+}
+
+/* Theme toggle button */
+.theme-toggle-button {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.theme-toggle-button:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .theme-toggle-button {
+    align-self: flex-end;
+  }
+}
