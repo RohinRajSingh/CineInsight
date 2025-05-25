@@ -4,7 +4,7 @@
 
 
 ## 🔗 Live Demo: (https://cineinsigh.vercel.app/)
-Try this
+
 
 ### 🚀 Features
 Movie & TV Show Search
